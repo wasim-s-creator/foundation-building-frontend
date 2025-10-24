@@ -1,19 +1,19 @@
 import React, { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { Box } from '@mui/material';
-import { Layout } from '@/components/Layout';
-import { LoadingSpinner } from '@/components/LoadingSpinner';
-import { useAuthStore } from '@/store/authStore';
+import { Layout } from './components/Layout';
+import { LoadingSpinner } from './components/LoadingSpinner';
+import { useAuthStore } from './store/authStore';
 
 // Lazy load pages for better performance
-const Dashboard = React.lazy(() => import('@/pages/Dashboard'));
-const Templates = React.lazy(() => import('@/pages/Templates'));
-const GitHubIntegration = React.lazy(() => import('@/pages/GitHubIntegration'));
-const WikiKnowledge = React.lazy(() => import('@/pages/WikiKnowledge'));
-const VectorSearch = React.lazy(() => import('@/pages/VectorSearch'));
-const Settings = React.lazy(() => import('@/pages/Settings'));
-const Login = React.lazy(() => import('@/pages/Login'));
-const NotFound = React.lazy(() => import('@/pages/NotFound'));
+const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const Templates = React.lazy(() => import('./pages/Templates'));
+const GitHubIntegration = React.lazy(() => import('./pages/GitHubIntegration'));
+const WikiKnowledge = React.lazy(() => import('./pages/WikiKnowledge'));
+const VectorSearch = React.lazy(() => import('./pages/VectorSearch'));
+const Settings = React.lazy(() => import('./pages/Settings'));
+const Login = React.lazy(() => import('./pages/Login'));
+const NotFound = React.lazy(() => import('./pages/NotFound'));
 
 // Loading fallback component
 const PageLoader: React.FC = () => (
