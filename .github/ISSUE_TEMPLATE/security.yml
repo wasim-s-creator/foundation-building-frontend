@@ -1,0 +1,125 @@
+name: 🔒 Security Vulnerability Report
+description: Report a security vulnerability in the Foundation Building Frontend
+title: "[SECURITY]: "
+labels: ["security", "priority-high", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **⚠️ IMPORTANT SECURITY NOTICE**
+        
+        If you believe you have found a security vulnerability, please report it responsibly.
+        For critical security issues, consider reaching out directly via email before creating this issue.
+        
+        **DO NOT** include:
+        - Actual exploit code
+        - Detailed attack vectors
+        - Sensitive system information
+        
+        Provide enough information for us to understand and reproduce the issue securely.
+  
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity Level
+      description: How severe is this vulnerability?
+      options:
+        - Critical (Remote code execution, data breach)
+        - High (Privilege escalation, significant data exposure)
+        - Medium (Limited data exposure, denial of service)
+        - Low (Information disclosure, minor security concern)
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: vulnerability-type
+    attributes:
+      label: Vulnerability Type
+      description: What type of vulnerability is this?
+      options:
+        - Cross-Site Scripting (XSS)
+        - Cross-Site Request Forgery (CSRF)
+        - Authentication Bypass
+        - Authorization Issues
+        - SQL Injection
+        - Input Validation
+        - Session Management
+        - Cryptographic Issues
+        - Dependency Vulnerability
+        - Configuration Issue
+        - Other
+    validations:
+      required: true
+  
+  - type: textarea
+    id: affected-components
+    attributes:
+      label: Affected Components
+      description: Which parts of the application are affected?
+      placeholder: "List the specific components, pages, or features affected"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: vulnerability-description
+    attributes:
+      label: Vulnerability Description
+      description: Describe the vulnerability (without revealing exploitable details)
+      placeholder: "Provide a clear description of the security issue"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: impact
+    attributes:
+      label: Potential Impact
+      description: What could an attacker potentially accomplish?
+      placeholder: "Describe the potential impact if this vulnerability is exploited"
+    validations:
+      required: true
+  
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce (General)
+      description: High-level steps to reproduce (avoid detailed exploit instructions)
+      placeholder: |
+        1. Navigate to...
+        2. Perform action...
+        3. Observe...
+    validations:
+      required: true
+  
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Details
+      description: Environment where you discovered this issue
+      placeholder: |
+        - Browser: 
+        - OS: 
+        - App Version: 
+        - Additional tools/extensions: 
+  
+  - type: textarea
+    id: mitigation-suggestions
+    attributes:
+      label: Suggested Mitigation
+      description: Any suggestions for fixing this vulnerability?
+      placeholder: "Your recommendations for addressing this security issue"
+  
+  - type: checkboxes
+    id: responsible-disclosure
+    attributes:
+      label: Responsible Disclosure Agreement
+      description: Please confirm your commitment to responsible disclosure
+      options:
+        - label: I agree to follow responsible disclosure practices
+          required: true
+        - label: I will not publicly disclose this vulnerability until it is resolved
+          required: true
+        - label: I have not shared exploit details in this report
+          required: true
+        - label: I understand this report may be made private during investigation
+          required: true
