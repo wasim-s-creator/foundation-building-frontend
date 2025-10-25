@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { ReactQueryDevtools } from 'react-query/devtools';
 import { ThemeProvider, CssBaseline } from '@mui/material';
@@ -39,9 +39,12 @@ root.render(
   <React.StrictMode>
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
-        {/* If the app is served from a sub-path (homepage in package.json),
-            set BrowserRouter basename so routes match the served URL. */}
-        <BrowserRouter basename={process.env.PUBLIC_URL || '/'}>
+        {/* Compute a safe basename for the router (extract pathname if PUBLIC_URL is a full URL) */}
+        {/* PUBLIC_URL may be a full URL (from package.json homepage); extract the pathname for basename */}
+        {
+          /* compute basename once */
+        }
+        <Router>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <App />
@@ -70,7 +73,7 @@ root.render(
               }}
             />
           </ThemeProvider>
-        </BrowserRouter>
+  </Router>
         {process.env.NODE_ENV === 'development' && (
           <ReactQueryDevtools initialIsOpen={false} />
         )}

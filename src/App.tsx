@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { Layout } from './components/Layout';
 import { LoadingSpinner } from './components/LoadingSpinner';
 import { useAuthStore } from './store/authStore';
@@ -45,6 +45,10 @@ const ProtectedRoute: React.FC<{ children: React.ReactNode }> = ({ children }) =
 const App: React.FC = () => {
   return (
     <div className="App">
+      {/* Debug banner to confirm the app is rendering */}
+      <Box sx={{ width: '100%', bgcolor: 'primary.main', color: 'primary.contrastText', py: 1, textAlign: 'center' }}>
+        <Typography variant="body1">Hello — the frontend is running (debug banner)</Typography>
+      </Box>
       <Routes>
         {/* Public routes */}
         <Route
