@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "React.js frontend for Foundation Building system with standardized templates, GitHub integration, and AI-powered features",
-  "homepage": "https://github.com/wasim-s-creator/foundation-building-frontend#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wasim-s-creator/foundation-building-frontend.git"
