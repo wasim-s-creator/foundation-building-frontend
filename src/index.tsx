@@ -39,7 +39,9 @@ root.render(
   <React.StrictMode>
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
-        <BrowserRouter>
+        {/* If the app is served from a sub-path (homepage in package.json),
+            set BrowserRouter basename so routes match the served URL. */}
+        <BrowserRouter basename={process.env.PUBLIC_URL || '/'}>
           <ThemeProvider theme={theme}>
             <CssBaseline />
             <App />

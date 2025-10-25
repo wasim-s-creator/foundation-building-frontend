@@ -1,6 +1,6 @@
 import React from 'react';
 import { Typography, Button } from '@mui/material';
-import { useAuthStore } from '@/store/authStore';
+import { useAuthStore } from 'store/authStore';
 
 const Login: React.FC = () => {
   const { login } = useAuthStore();
