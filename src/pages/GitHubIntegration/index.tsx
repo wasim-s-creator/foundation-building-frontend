@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   Box,
   Typography,
@@ -17,7 +17,7 @@ import {
   Tab,
   Tabs,
   Paper,
-  Divider,
+  
   IconButton
 } from '@mui/material';
 import {
@@ -29,7 +29,7 @@ import {
   Refresh as RefreshIcon,
   Link as LinkIcon,
   Star as StarIcon,
-  Fork as ForkIcon
+  CallSplit as ForkIcon
 } from '@mui/icons-material';
 
 interface Repository {
@@ -62,7 +62,7 @@ const GitHubIntegration: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange = (_event: React.SyntheticEvent, newValue: number) => {
     setCurrentTab(newValue);
   };
 
