@@ -8,8 +8,8 @@ import { Toaster } from 'react-hot-toast';
 
 import App from './App';
 import { theme } from './theme';
-import { ErrorBoundary } from './components/ErrorBoundar
-  y';import './index.css';
+import { ErrorBoundary } from 'components/ErrorBoundary';
+import './index.css';
 
 // Create a client for React Query
 const queryClient = new QueryClient({
