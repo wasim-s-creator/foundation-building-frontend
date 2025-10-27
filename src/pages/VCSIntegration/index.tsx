@@ -21,10 +21,9 @@ import {
 } from '@mui/material';
 import {
   GitHub as GitHubIcon,
-  Settings as SettingsIcon,
   Commit as CommitIcon,
   CallSplit as BranchIcon,
-  PullRequest as PullRequestIcon,
+  MergeType as PullRequestIcon,
   Refresh as RefreshIcon,
   Link as LinkIcon,
   Person as PersonIcon,
