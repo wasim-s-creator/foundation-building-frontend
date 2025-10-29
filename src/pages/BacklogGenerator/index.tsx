@@ -13,11 +13,9 @@ import {
   StepLabel,
   List,
   ListItem,
-  ListItemText,
   Chip,
   CircularProgress,
   Paper,
-  Divider,
 } from '@mui/material';
 import {
   AutoAwesome as AIIcon,
