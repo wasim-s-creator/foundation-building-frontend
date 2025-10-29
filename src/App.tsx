@@ -13,7 +13,8 @@ const WikiKnowledge = React.lazy(() => import('./pages/WikiKnowledge'));
 const VectorSearch = React.lazy(() => import('./pages/VectorSearch'));
 const Settings = React.lazy(() => import('./pages/Settings'));
 const Login = React.lazy(() => import('./pages/Login'));
-const NotFound = React.lazy(() => import('./pages/NotFound'));
+const NotFound = React.lazy(() => import('./pages/NotFound')
+                           const BacklogGenerator = React.lazy(() => import('./pages/BacklogGenerator')););
 
 // Loading fallback component
 const PageLoader: React.FC = () => (
@@ -116,7 +117,15 @@ const App: React.FC = () => {
                 <VectorSearch />
               </Suspense>
             }
-          />
+          /
+            <Route
+  path="backlog"
+  element={
+    <Suspense fallback={<PageLoader />}>
+      <BacklogGenerator />
+    </Suspense>
+  }
+/>>
           <Route
             path="settings"
             element={
